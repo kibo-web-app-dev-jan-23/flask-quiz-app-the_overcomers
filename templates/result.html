@@ -3,14 +3,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quiz Game</title>
-    <meta name="description" content="Quiz Game with Flask">
+    <meta name="description" content="The Overcomers Quiz Game">
   </head>
   <body>
     <h1>Quiz Results</h1>
-    <h2>Congratulations! You scored {{ score }} out of {{ total }}.</h2>
-    <p>Your performance on this quiz has been analyzed and recorded. You can always come back and try again to improve your score. Well done!</p>
+    {% if score < total/2  %}
+        <h2>Keep trying! You scored {{ score }} out of {{ total }}. Don't give up, improvement takes time and effort.</h2>
+    {% else %} 
+        <h2>Great job! You scored {{ score }} out of {{ total }}. Your hard work is paying off.</h2>
+    {% endif %}
+    <p>Your performance on this quiz is a reflection of your effort and dedication. Keep up the good work and continue learning.</p>
     <a href="/" class="back-home">Go back home</a>
-    
   </body>
 </html>
 

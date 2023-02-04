@@ -15,7 +15,7 @@
       {% for i, quiz in enumerate(quests) %}
         <div class="question">
           <label class="question-label">{{i+1}}. {{ quiz.question }} (True or False)</label>
-          <input class="response-input" type="text" name="responses" value="" placeholder="True or False" >
+          <input class="response-input" type="text" name="responses{{i}}" value="" placeholder="True or False" >
         </div>
         <br>
       {% endfor %}
