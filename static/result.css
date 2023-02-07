@@ -1,4 +1,4 @@
- body {
+body {
   background-color: #f2f2f2;
   font-family: Arial, sans-serif;
   padding: 50px;
@@ -26,7 +26,7 @@ p {
   display: block;
   margin: 0 auto;
   padding: 15px 40px;
-  background-color: #4CAF50;
+  background-color: #006699;
   color: white;
   border-radius: 5px;
   text-align: center;
@@ -36,5 +36,5 @@ p {
 }
 
 .back-home:hover {
-  background-color: #3e8e41;
+  background-color: #2bb0f3;
 }
