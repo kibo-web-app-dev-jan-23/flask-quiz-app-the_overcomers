@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Overcomers Quiz Game</title>
+    <meta name="description" content="A challenging and exciting quiz game with Flask">
+    <link rel="stylesheet" href="/static/game_brain.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">The Overcomers Quiz Game</h1>
+      <h2 class="subtitle">Answer True or False to each question</h2>
+    </div>
+    <br>
+    <form class="quiz-form" action=/result method="post">
+      {% for i, quiz in enumerate(quests) %}
+        <div class="question">
+          <label class="question-label">{{i+1}}. {{ quiz.question }} (True or False)</label>
+          <input class="response-input" type="text" name="responses{{i}}" value="" placeholder="True or False" >
+        </div>
+        <br>
+      {% endfor %}
+      <br>
+      <div class="submit-button">
+        <input type="submit" name="" value="Submit">
+      </div>
+    </form>
+  </body>
+</html>
+
+
